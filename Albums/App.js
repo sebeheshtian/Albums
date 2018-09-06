@@ -3,6 +3,7 @@ import { View, Text } from 'react-native';
 import axios from 'axios';
 
 import Header from './src/components/Header';
+import Ball from './src/components/Ball';
 import AlbumList from './src/components/AlbumList';
 const URL = "http://23.227.201.71:3100/albums";
 class App extends Component {
@@ -19,6 +20,12 @@ class App extends Component {
       <View style={styles.containerStyle}>
         <Header title="Albums!" />
         <AlbumList data={this.state.albums} />
+
+        {/*<Ball
+          ballStyle={{
+            backgroundColor: 'black'
+          }}
+          />*/}
       </View>
     );
   }
@@ -37,6 +44,7 @@ class App extends Component {
 const styles = {
   containerStyle: {
     backgroundColor: 'white',
+    flex: 1,
   },
 }
 

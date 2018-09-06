@@ -1,23 +1,13 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { Text, ScrollView } from 'react-native';
 
-import Card from './Card';
-
-renderAlbum = (album) => {
-  return (
-    <Card key={album.url}>
-      <Text>
-        {album.title}
-      </Text>
-    </Card>
-  );
-}
+import AlbumDetail from './AlbumDetail';
 
 const AlbumList = (props) => {
   return (
-    <View>
-      {props.data.map(album => renderAlbum(album))}
-    </View>
+    <ScrollView>
+      {props.data.map(album => <AlbumDetail key={album.url} album={album} />)}
+    </ScrollView>
   );
 }
 

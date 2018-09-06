@@ -1,9 +1,9 @@
 import React from 'react';
 import { View } from 'react-native';
 
-const Ball = () => {
+const Ball = (props) => {
   return (
-    <View style={styles.ballStyle} />
+    <View style={[styles.ballStyle, props.ballStyle]} />
   );
 }
 
